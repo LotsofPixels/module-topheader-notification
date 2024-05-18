@@ -1,0 +1,11 @@
+<?php
+/** @var  $notificationbarViewModel Lotsofpixels\NotificationBar\ViewModel\ */
+/** @var  $block  Magento\Framework\View\Element\Template */+
+
+$notificationbarViewModel = $block->getdata('notificationbar.viewmodel'); ?>
+
+<?php if ($notificationbarViewModel->getBarStatus() === '1') { ?>
+    <div class="notification-bar" <?= $notificationbarViewModel->getBackgroundColor(); ?>><?= $notificationbarViewModel->getNotificationContent() ?></div> <?php ;
+} ?>
+
+
